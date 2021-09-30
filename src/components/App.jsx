@@ -1,8 +1,19 @@
 /* @jsx h */
 import { h } from "preact";
+import styled from "styled-components";
+
+import { StyleSheetManager } from "styled-components";
+
+const Heading = styled.h1`
+  color: pink;
+`;
 
 const App = () => {
-  return <h1>Hey, Shadow DOM!</h1>;
+  return (
+    <StyleSheetManager target={document.getElementById("app-root").shadowRoot}>
+      <Heading>Hey, Shadow DOM!</Heading>
+    </StyleSheetManager>
+  );
 };
 
 export default App;
