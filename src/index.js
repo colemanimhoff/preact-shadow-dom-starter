@@ -5,13 +5,10 @@ import App from "./components/App.jsx";
 
 // shadow portal root
 
-const body = document.getElementsByTagName("body")[0];
-const portalRoot = document.createElement("div");
-portalRoot.setAttribute("id", "portal-root");
+const portalRoot = document.querySelector("#portal-root");
 portalRoot.attachShadow({
   mode: "open",
 });
-body.appendChild(portalRoot);
 
 // app shadow root
 
