@@ -1,0 +1,15 @@
+{
+  "name": "preact-shadow-dom-boilerplate",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "html-webpack-plugin": "^5.3.2",
+    "webpack": "^5.55.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.3.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development"
+  }
+}
