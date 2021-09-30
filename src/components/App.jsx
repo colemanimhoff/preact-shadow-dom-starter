@@ -1,17 +1,23 @@
 /* @jsx h */
-import { h } from "preact";
-import styled from "styled-components";
+import { Fragment, h } from "preact";
+import styled, { StyleSheetManager } from "styled-components";
 
-import { StyleSheetManager } from "styled-components";
+import Portal from "./Portal.jsx";
 
-const Heading = styled.h1`
-  color: pink;
+const Heading = styled.h3`
+  color: #e155f5;
+  font-family: sans-serif;
 `;
 
 const App = () => {
   return (
     <StyleSheetManager target={document.getElementById("app-root").shadowRoot}>
-      <Heading>Hey, Shadow DOM!</Heading>
+      <Fragment>
+        <Heading>Hey, Shadow DOM!</Heading>
+        <Portal>
+          <Heading>Hey, Shadow Portal!</Heading>
+        </Portal>
+      </Fragment>
     </StyleSheetManager>
   );
 };
