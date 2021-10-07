@@ -15,7 +15,7 @@ const WidgetContainer = styled.div`
 
 const App = () => {
   return (
-    <StyleSheetManager target={document.getElementById("app-root").shadowRoot}>
+    <StyleSheetManager target={document.querySelector("#app-root").shadowRoot}>
       <WidgetContainer>
         <Heading>Hey, Shadow DOM!</Heading>
         <Portal>

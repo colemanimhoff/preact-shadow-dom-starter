@@ -11,7 +11,7 @@ const Portal = ({ children, ...props }) => {
   `;
 
   const node = useRef();
-  const portalRoot = document.getElementById("portal-root");
+  const portalRoot = document.querySelector("#portal-root");
 
   useLayoutEffect(() => {
     const { current } = node;
