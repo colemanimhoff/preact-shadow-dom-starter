@@ -4,6 +4,7 @@ import { h, render } from "preact";
 import App from "./components/App.jsx";
 
 // shadow portal root
+
 const portalRoot = document.createElement("div");
 portalRoot.setAttribute("id", "portal-root");
 portalRoot.attachShadow({
