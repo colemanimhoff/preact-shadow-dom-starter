@@ -3,9 +3,13 @@
 import { h, Fragment } from "preact";
 import { useLayoutEffect, useRef } from "preact/hooks";
 import { createPortal } from "preact/compat";
-import { StyleSheetManager } from "styled-components";
+import styled, { StyleSheetManager } from "styled-components";
 
 const Portal = ({ children, ...props }) => {
+  const PortalContainer = styled.div`
+    all: initial;
+  `;
+
   const node = useRef();
   const portalRoot = document.getElementById("portal-root");
 
@@ -20,7 +24,7 @@ const Portal = ({ children, ...props }) => {
     <Fragment ref={node} {...props}>
       {createPortal(
         <StyleSheetManager target={portalRoot.shadowRoot}>
-          {children}
+          <PortalContainer>{children}</PortalContainer>
         </StyleSheetManager>,
         portalRoot.shadowRoot
       )}
